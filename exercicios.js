@@ -159,3 +159,103 @@ function freteGratis (vcompra, mvip, entrega) {
     }
 
 }
+
+// 11. Sugestão de Vestuário
+// Crie um programa que receba a temperatura atual e uma informação se está
+// chovendo ou não (true ou false). Se a temperatura for menor que 15 graus ou se
+// estiver chovendo, o programa deve exibir a mensagem "Leve um casaco". Caso
+// contrário, deve exibir "Vestuário livre".
+
+function vestuario (temperatura, chuva) {
+
+    if (temperatura < 15 || chuva) {
+        console.log("Leve Casaco!")
+    } else {
+        console.log("Não Leve Casaco!")
+    }
+
+}
+
+vestuario(45, true)
+
+// 12.Acesso à Piscina do Clube
+// Um clube só permite o uso da piscina se o sócio estiver vestindo traje adequado
+// (true/false) e estiver com o exame médico em dia (true/false). Crie um programa
+// que receba essas duas informações e exiba se a entrada na piscina está permitida
+// ou negada.
+
+
+function piscinaClube (traje, exame) {
+
+    if (traje && exame) {
+        console.log("Autorizado")
+    } else {
+        console.log("Não Autorizado")
+    }
+
+}
+
+piscinaClube(true, true)
+
+// 13. Funcionamento da Loja
+// Uma loja funciona apenas de segunda a sexta-feira, no horário das 8h às 18h. Crie
+// um programa que receba o dia da semana e a hora atual (número inteiro) e informe
+// se a loja está aberta ou fechada.
+
+function aberturaLoja (dia, horario) {
+
+    if (dia == "Sabado" || dia == "Domingo") {
+        console.log("A loja fechada")
+    } 
+    else if (horario >= 8 && horario < 18) {
+        console.log("A loja aberta!")
+    } 
+    else {
+        console.log("A loja fechada")
+    }
+}
+
+aberturaLoja("Segunda", 18)
+
+// 14.Validação de Formulário
+// Um site exige que, para enviar um cadastro, o campo de e-mail não esteja vazio
+// (diferente de "") e que o usuário tenha marcado a opção de aceitar os termos de
+// serviço (true). Crie uma função que receba o e-mail e a confirmação dos termos e
+// retorne se o formulário é válido para envio.
+
+
+function validaForm (email, termo) {
+
+    if (email !== "" && termo == true) {
+        return true
+    } else {
+        return false
+    }
+
+}
+
+console.log(validaForm("oliver@gmail", true))
+
+
+// 15.Vaga Preferencial no Estacionamento
+// Um shopping possui vagas reservadas. O motorista tem direito a estacionar nessa
+// vaga se tiver 60 anos ou mais ou se possuir a credencial PNE (Pessoa com
+// Necessidade Especial). No entanto, existe uma regra geral do local: nenhum tipo
+// de caminhão pode estacionar nessas vagas, independentemente da condição do
+// motorista. Crie um programa que receba a idade do motorista, se ele possui a
+// credencial (true/false) e o tipo de veículo, informando se a parada na vaga é
+// permitida.
+// Desafio extra: Criar as telas com HTML para pegar os valores do usuário.
+
+function vagaPref (idade, credencial, veiculo) {
+
+    if ((idade >= 60 || credencial === true) && veiculo !== "Caminhao") {
+        console.log("Estacionamento permitido!")
+    } else {
+        console.log("Estacionamento não permitido!")
+    }
+
+}
+
+vagaPref(65, false, "Carro")
+
